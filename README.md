@@ -47,3 +47,15 @@ Install NVM and the latest version of Node/NPM as shown in the [documentation](h
 ## Prerequisites: C++
 
 None
+
+## Installation
+
+Run `nvim` at least once to install all the base packages.
+
+Then, clone this repo inside the `.config/nvim/lua/custom` folder:
+
+```bash
+git clone https://github.com/kuax/nvim-config.git ~/.config/nvim/lua/custom
+```
+
+
