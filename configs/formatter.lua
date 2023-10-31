@@ -12,6 +12,9 @@ local M = {
     typescriptreact = {
       require("formatter.filetypes.typescriptreact").biome
     },
+    python = {
+      require("formatter.filetypes.python").black
+    },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace
     }

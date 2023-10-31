@@ -14,6 +14,13 @@ Install some needed system dependencies:
 sudo apt update && sudo apt install build-essential
 ```
 
+Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation):
+
+```bash
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+sudo dpkg -i ripgrep_13.0.0_amd64.deb
+```
+
 Follow the simple installation steps on [NvChad's documentation](https://nvchad.com/docs/quickstart/install)
 
 ## Prerequisites: Go
@@ -48,6 +55,14 @@ Install NVM and the latest version of Node/NPM as shown in the [documentation](h
 
 None
 
+## Prerequisites: Python
+
+Have python3, pip and venv installed
+
+```bash
+sudo apt install python3 python3-pip python3-venv
+```
+
 ## Installation
 
 Run `nvim` at least once to install all the base packages.
@@ -57,5 +72,3 @@ Then, clone this repo inside the `.config/nvim/lua/custom` folder:
 ```bash
 git clone https://github.com/kuax/nvim-config.git ~/.config/nvim/lua/custom
 ```
-
-

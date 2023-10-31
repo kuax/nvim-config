@@ -47,6 +47,10 @@ local plugins = {
         "rust-analyzer",
         "typescript-language-server",
         "tailwindcss-language-server",
+        "pyright",
+        "ruff-lsp",
+        "black",
+        "debugpy",
       }
     }
   },
@@ -106,10 +110,26 @@ local plugins = {
   {
     "leoluz/nvim-dap-go",
     ft = "go",
-    dependencies = "mfussenegger/nvim-dap",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap-ui"
+    },
     config = function (_, opts)
       require("dap-go").setup(opts)
       require("core.utils").load_mappings("dap_go")
+    end
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap-ui"
+    },
+    config = function (_, opts)
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+      require("core.utils").load_mappings("dap_python")
     end
   },
   {
